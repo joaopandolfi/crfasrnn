@@ -1,0 +1,28 @@
+For Ubuntu (< 17.04)
+
+General dependencies
+
+sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+sudo apt-get install --no-install-recommends libboost-all-dev
+
+CUDA: Install by apt-get or the NVIDIA .run package. The NVIDIA package tends to follow more recent library and driver versions, but the installation is more manual. If installing from packages, install the library and latest driver separately; the driver bundled with the library is usually out-of-date. This can be skipped for CPU-only installation.
+
+BLAS: install ATLAS by sudo apt-get install libatlas-base-dev or install OpenBLAS by sudo apt-get install libopenblas-dev or MKL for better CPU performance.
+
+Python (optional): if you use the default Python you will need to sudo apt-get install the python-dev package to have the Python headers for building the pycaffe interface.
+
+Compatibility notes, 16.04
+
+CUDA 8 is required on Ubuntu 16.04.
+
+
+cd /usr/lib/x86_64-linux-gnu
+sudo ln -s libhdf5_serial.so.8.0.2 libhdf5.so
+sudo ln -s libhdf5_serial_hl.so.8.0.2 libhdf5_hl.so
+
+ MakeFile.config
+INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
+LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/
+
+
+sudo apt-get install python-numpy
