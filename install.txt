@@ -27,3 +27,6 @@ LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/
 sudo apt install ucommon-utils
 
 sudo apt-get install python-numpy
+
+cd caffe/python
+for req in $(cat requirements.txt); do pip install $req; done
