@@ -24,5 +24,6 @@ sudo ln -s libhdf5_serial_hl.so.8.0.2 libhdf5_hl.so
 INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
 LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/
 
+sudo apt install ucommon-utils
 
 sudo apt-get install python-numpy
