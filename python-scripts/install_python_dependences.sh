@@ -1,3 +1,4 @@
+sudo apt-get install python-pip
 sudo pip install pandas
 sudo pip install pillow
 sudo pip install scikit-image
