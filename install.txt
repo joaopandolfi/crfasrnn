@@ -1,3 +1,7 @@
+REPOSITORIO DA CAFFE CORRETO:
+https://github.com/torrvision/crfasrnn
+
+
 For Ubuntu (< 17.04)
 
 General dependencies
